@@ -15,6 +15,7 @@ import {
   themeColor,
 } from 'react-native-rapi-ui'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+import LoginImg from '../../../assets/login.png'
 
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState('')
@@ -41,15 +42,15 @@ const Login = ({ navigation }) => {
     <KeyboardAvoidingView behavior='height' enabled style={{ flex: 1 }}>
       <Layout>
         <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-          {/* <View
+          <View
             style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
           >
             <Image
               resizeMode='contain'
-              source={}
-              style={{ height: 220, width: 220 }}
+              source={LoginImg}
+              style={{ height: 220, width: '100%' }}
             />
-          </View> */}
+          </View>
           <View
             style={{
               flex: 3,
@@ -142,7 +143,7 @@ const Login = ({ navigation }) => {
                 }
               >
                 <Text style={{ marginLeft: 5 }} size='md'>
-                  {isDarkmode ? 'Light Theme' : 'Dark Mode'}
+                  {isDarkmode ? 'Light Theme' : 'Dark Theme'}
                 </Text>
               </TouchableOpacity>
             </View>

@@ -15,6 +15,7 @@ import {
   themeColor,
 } from 'react-native-rapi-ui'
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
+import RegisterImg from '../../../assets/register.png'
 
 const Register = ({ navigation }) => {
   const [email, setEmail] = useState('')
@@ -41,15 +42,15 @@ const Register = ({ navigation }) => {
     <KeyboardAvoidingView behavior='height' enabled style={{ flex: 1 }}>
       <Layout>
         <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-          {/* <View
+          <View
             style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
           >
             <Image
               resizeMode='contain'
-              source={}
-              style={{ height: 220, width: 220 }}
+              source={RegisterImg}
+              style={{ height: 220, width: '100%' }}
             />
-          </View> */}
+          </View>
           <View
             style={{
               flex: 3,
